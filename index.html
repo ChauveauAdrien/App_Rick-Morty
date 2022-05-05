@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rick & Morty</title>
-</head>
-<body>
-    
-</body>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- js -->
+    <script src="./assets/js/app.js" defer></script>
+    <!-- font -->
+  </head>
+  <body>
+    <header class="content-header">
+      <div class="header-wrapper">
+        <div class="logo">Logo</div>
+        <div class="navbar">
+          <a href="#" class="item-menu">Sign in</a>
+          <a href="#" class="item-menu">All Characters</a>
+          <a href="#" class="item-menu">Search</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-site">
+        <div class="wrapper-main">
+            <div class="first-page">
+                <div class="citation">
+                    <div class="text">
+                        <p class="text-citation">It's time to get<br> schwifty in here</p>
+                    </div>
+                    <div class="button-discover">
+                        <button class="btn-discover">Discover</button>
+                    </div>
+                </div>
+                <div class="animation">
+                    <figure>
+                        <img class="img-rick-morty" src="./assets/img/pngbyte.com-morty-png-Rick-et-Morty-rick-and-morty-logo.png">
+                        <div class="shadow"></div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </main>
+  </body>
 </html>

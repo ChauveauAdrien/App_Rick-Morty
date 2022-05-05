@@ -1,0 +1,107 @@
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+/* init */
+*, 
+::before, 
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Source Sans Pro';
+}
+
+body {
+    background: #BD64CB;
+}
+/* header */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    width: 95%;
+    margin: auto;
+}
+
+.logo{
+    font-size: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+/* body */
+
+.content-site{
+    height: 100%;
+    width: 100%
+}
+
+.first-page{
+    display: flex;
+    width: 90%;
+    height: 85vh;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.text-citation{
+    font-size: 80px;
+    font-family: sogeumjaengi-210, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #F9FF69;
+    text-shadow: 5px -5px #1B244C, 10px -8px #98ECE0;
+}
+
+.button-discover{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 35px;
+}
+
+.btn-discover{
+    background-color: transparent;
+    border: solid 2px white;
+    padding: 10px 70px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+figure{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.img-rick-morty {
+    height: 60vh;
+    width: auto;
+    margin-right: 100px;
+}
+
+.shadow{
+    position: absolute;
+    background-color: #934e9e;
+    height: 120px;
+    width: 500px;
+    border-radius: 100%;
+    filter: blur(20px);
+    z-index: -1;
+    transform: translateY(60px);
+    margin-right: 100px;
+}
+
