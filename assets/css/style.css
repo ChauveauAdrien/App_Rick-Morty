@@ -41,12 +41,12 @@ body {
 
 .content-site{
     height: 100%;
-    width: 100%
+    width: 100%;
 }
 
 .first-page{
     display: flex;
-    width: 90%;
+    width: 90vw;
     height: 85vh;
     align-items: center;
     justify-content: space-between;

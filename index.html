@@ -8,42 +8,72 @@
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
     <!-- js -->
     <script src="./assets/js/app.js" defer></script>
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- font -->
   </head>
   <body>
-    <header class="content-header">
-      <div class="header-wrapper">
-        <div class="logo">Logo</div>
-        <div class="navbar">
-          <a href="#" class="item-menu">Sign in</a>
-          <a href="#" class="item-menu">All Characters</a>
-          <a href="#" class="item-menu">Search</a>
+    <div class="app" id="App">
+      <header class="content-header">
+        <div class="header-wrapper">
+          <div class="logo">Logo</div>
+          <div class="navbar">
+            <a href="#" class="item-menu">Sign in</a>
+            <a href="#" class="item-menu">All Characters</a>
+            <a href="#" class="item-menu">Search</a>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main class="content-site">
+      <main class="content-site">
         <div class="wrapper-main">
-            <div class="first-page">
-                <div class="citation">
-                    <div class="text">
-                        <p class="text-citation">It's time to get<br> schwifty in here</p>
-                    </div>
-                    <div class="button-discover">
-                        <button class="btn-discover">Discover</button>
-                    </div>
-                </div>
-                <div class="animation">
-                    <figure>
-                        <img class="img-rick-morty" src="./assets/img/pngbyte.com-morty-png-Rick-et-Morty-rick-and-morty-logo.png">
-                        <div class="shadow"></div>
-                    </figure>
-                </div>
+          <div class="first-page">
+            <div class="citation">
+              <div class="text">
+                <p class="text-citation">
+                  It's time to get<br />
+                  schwifty in here
+                </p>
+              </div>
+              <div class="button-discover">
+                <button @click="getWeather" class="btn-discover">
+                  Discover
+                </button>
+              </div>
             </div>
+            <div class="animation">
+              <figure>
+                <img
+                  class="img-rick-morty"
+                  src="./assets/img/pngbyte.com-morty-png-Rick-et-Morty-rick-and-morty-logo.png"
+                />
+                <div class="shadow"></div>
+              </figure>
+            </div>
+          </div>
         </div>
-    </main>
+      </main>
+      <ul v-for="item in result">
+        <pre>{{item.name}}</pre>
+      </ul>
+    </div>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'iur4gtl',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f%7C%7Ca&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
   </body>
 </html>
